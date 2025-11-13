@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasi Chisanyama - Our services</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!--Logo-->
+        <img src="../assets/download.png" alt="Kasi chisanyama logo" width="400" height="300"><br/>
+    <!--Navigation-->
+    <nav id="nav">
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul id="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/pages/about.html">About us</a>
+            <a href="/pages/contact.html">Contact us</a>
+            <a href="/pages/enquiry.html">Enquiry</a>
+            <a href="/pages/services.html">Our services</a>
+            <a href="/pages/menu.html">Our menu</a>
+        </ul>
+      </nav>
+    </header>
+    <!--Products and services-->
+    <main>
+        <table>
+            <p>A Kasi Chisanyama is a type of informal, casual restaurant or food establisment that specializes in traditional South African cusine, practically braai
+                (barbecued) meats and other local dishes. 
+            </p> 
+            <h2>We offer:</h2>
+            <td>
+                <tr><h3>Braai Meats</h3></tr>
+                <ul>
+                <li>Boerewors</li>
+                <li>Steak</li>
+                <li>Chicken</li>
+                <li>Pork</li><br>
+                </ul>
+                <tr><h3>Traditional dishes</h3></tr>
+                <ul>
+                <li>Pap</li>
+                <li>Mogodu</li>
+                <li>Chops</li>
+                <li>Morogo</li>
+                <li>Chakalaka</li>
+                <li>Side dishes</li><br>
+                </ul>
+                <tr><h3>Cold beverages</h3></tr>
+                <ul>
+                <li>Soft drinks</li>
+                <li>Water</li><br>
+                </ul>
+                <tr><h3>Dining experience</h3></tr>
+                <ul>
+                <li>Casual atmosphere: a relaxed, informal setting where customers can enjoy their meals </li>
+                <li>Outdoor seating: we offer outdoor seating areas</li><br>
+                </ul>
+                <tr><h3>Takeaway and delivery</h3></tr>
+                <ul>
+                <li>Takeaway: customers can order food to go and enjoy elsewhere</li>
+                <li>Delivery: we offer delivery services to close-by places with our own drivers</li><br>
+                </ul>
+                <tr><h3>Catering Services</h3></tr>
+                <ul>
+                <li>Events: we offer live music and sport broadcasts</li>
+                <li>Braai packages: customizable braai packages for events and gatherings</li><br>
+                </ul>
+            </td>
+        </table>
+    </main>
+    <footer>
+        <div class="socials">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p id="my paragraph">&copy;2025 Kasi Chisanyama meat & grill</p>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

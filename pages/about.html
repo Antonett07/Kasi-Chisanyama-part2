@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasi Chisanyama - About us</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+    <body>
+        <header>
+            <!--Logo-->
+            <img src="../assets/download.png" alt="Kasi chisanyama logo" width="400" height="300"><br/>
+             <!--Navigation-->
+             <nav id="nav">
+                <button class="hamburger" id="hamburger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+                <ul id="nav-links">
+                    <a href="/index.html">Home</a>
+                    <a href="/pages/about.html">About us</a>
+                    <a href="/pages/contact.html">Contact us</a>
+                    <a href="/pages/enquiry.html">Enquiry</a>
+                    <a href="/pages/services.html">Our services</a>
+                    <a href="/pages/menu.html">Our menu</a>
+                </ul>
+              </nav>
+       </header>
+       <main>
+        <!--information based on our chisanyama-->
+            <h1>ABOUT US:</h1>
+            
+            <h2>Our History</h2>
+            <p>A kasi (township) chisanyama is a popular social venue in South Africa where people buy and grill meat, often on a "buy-and-braai" basis,
+            creating a vibrant community atmosphere. The term itself is a Zulu word meaning "burn meat". The history is rooted in the township culture, 
+            where these informal braai (barbecue) spots developed as a way for communities to gather, socialize, and enjoy grilled food in an accessible, 
+            communal setting. 
+            </p>
+            
+            <h2>Our Mission</h2>
+            <p>Is to provide our customers with an authentic South African dining experience, celebrating the vibrant flavors 
+                and rich cultural heritage of traditional braai (barbecue) cuisine. We aim to create a warm and welcoming atmosphere where friends and families 
+                can gather, indulge in delicious food, and create lasting memories. We are committed to sourcing the highest quality meats, spices, and ingredients, 
+                ensuring that each dish we serve is flavorful, satisfying, and prepared with passion. Through exceptional service and attention to detail, we strive 
+                to exceed our customers' expectations and become a destination of choice for those seeking a taste of South Africa.
+            </p>
+            
+            <h2>Our vision:</h2>
+            <p>To be the leading fast-food restaurant providing quality and authentic African cuisine to people around the world, To become the premier destination for
+            authentic South African barbecue, renowned for its delectable dishes, vibrant atmosphere, and unparalleled customer satisfaction.</p>
+            
+            <h2>Meet our team:</h2>
+            <!--images of out team-->
+                <div class="staff-container">
+                    <div class="stuff-member">
+                        <p>These are our worker</p>
+                        <img src="../assets/lichaba1.jpg" width="400" height="300"><br>
+                        <img src="../assets/unnamed.jpg" width="400" height="300"><br>
+                        <img src="../assets/shisanyama.jpg" width="400" height="300"><br>
+                    </div>
+                    
+                    <div class="stuff-member">
+                        <h3>Braai master: Thabo Baloi</h3>
+                        <p>Responsible for preparing and cooking traditional Siuth African dishes</p>
+                        <img src="../assets/Untitled-design-24.png" width="400" height="300"><br>
+                    </div>
+
+                    <div class="stuff-member"></div>
+                        <h3>Pap cook/Prep: Monica Moloto</h3>
+                        <p>Responsible for cooking pap and preparing the side dishes</p>
+                        <img src="../assets/09TBGENENTRE_54902.jpg" width="400" height="300"><br>
+                    </div>
+                    
+                    <div class="stuff-member">
+                        <h3>Side dish chef: Lerato Shai</h3>
+                        <p>Helps with cooking the pap, side diehes and other traditional dishes</p>
+                        <img src="../assets/download(2).jpg" width="400" height="300"><br>
+                    </div>
+
+                    <div class="stuff-member">
+                        <h3>Cashiers: Katlego Mohlala and Phomolo Komane</h3>
+                        <p>They take orders from customers and notify our chefs about the orders</p>
+                        <img src="../assets/a-guide-to-launching-a-shisanyama-business.webp" width="400" height="300"><br>
+                        <img src="../assets/1511444245-27619.jpg" width="400" height="300"><br>
+                    </div>
+
+                    <div class="stuff-member">
+                        <h3>Event managers: Mpho Lesufi and Kagiso Moraba</h3>
+                        <p>Responsible for hosting events, sound systems and big screening</p>
+                        <img src="../assets/3-10.png" width="400" height="300"><br>
+                        <img src="../assets/142976.jpg" width="400" height="300"><br>
+                    </div>
+                </div>
+     </main>
+        <footer>
+            <div class="socials">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p id="my paragraph">&copy;2025 Kasi Chisanyama meat & grill</p>
+        </footer>
+        <script>
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            });
+        </script>
+    </body>
+</html>

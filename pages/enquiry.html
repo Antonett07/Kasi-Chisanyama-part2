@@ -29,89 +29,82 @@
           </nav>
     </header>
     <h2>Enquiry:</h2>
-    <form action="" method="post">
+     <form id="enquiry-form" action="" method="post">
         <table>
-            <!--Textboxes-->
+            <!-- Name -->
             <tr>
-                    <td width="100px">Name:</td>
-                    <td><input type="text" name="name" placeholder="Enter your name" required></td>
+                <td width="100px">Name:</td>
+                <td>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <span id="name-feedback" class="feedback"></span>
+                </td>
             </tr>
+
+            <!-- Surname -->
             <tr>
                 <td width="100px">Surname:</td>
-                <td><input type="text" name="surname" placeholder="Enter your surname" required></td>
+                <td>
+                    <input type="text" id="surname" name="surname" placeholder="Enter your surname" required>
+                    <span id="surname-feedback" class="feedback"></span>
+                </td>
             </tr>
+
+            <!-- Email -->
             <tr>
                 <td width="100px">Email:</td>
-                <td><input type="text" name="email" placeholder="Enter your email" required></td>
+                <td>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <span id="email-feedback" class="feedback"></span>
+                </td>
             </tr>
+
+            <!-- Phone Number -->
             <tr>
                 <td width="100px">Phone Number:</td>
-                <td><input type="text" name="email" placeholder="Enter your phone number" required></td>
-            </tr><br>
-            <!--Dropdown list-->
-            <tr>
-            <td width="100px">Enquiry:</td>
-            <td>
-            <select id="enquiryType"name="enquiryType" required>
-                <option>--Select--</option>
-                <option value="order">Pleace an order</option>
-                <option value="question">General question</option>
-                <option value="Custom">Customize your order</option>
-            </select><br>
-            </td>
-            </tr>
-            <tr>
-                <td width="100px">Village:</td>
                 <td>
-                <select name="village">
-                        <option>--Select--</option>
-                        <option>Mashifane park</option>
-                        <option>Elephant's hill</option>
-                        <option>Aloe ridge</option>
-                        <option>Praktiseer</option>
-                        <option>Mashamptane</option>
-                </select>
-                </td>
-                <!--Radio Buttons-->
-                <tr>
-                    <td width="100px">Gender:</td>
-                    <td><input type="radio"  name="male" value="male">Male</type></td>
-                </tr>
-                <tr>
-                    <td width="100"></td>
-                    <td><input type="radio"  name="female" value="female">Female</td></type></td>
-                </tr>
-            </tr>
-            <!--Checkbox-->
-            <tr>
-                <td width="100px">Where did you hear about us?</td>
-                <td><input type="checkbox" name="television" value="television">television</td>
-            </tr>
-            <tr>
-                <td width="100px"></td>
-                <td><input type="checkbox" name="newspaper" value="newspaper">Newspaper</td>
-            </tr>
-            <tr>
-                <td width="100px"></td>
-                <td><input type="checkbox" name="internet" value="internet">Internet</td>
-            </tr>
-            <tr>
-                <td width="100px"></td>
-                <td><input type="checkbox" name="radio" value="radio">Radio</td>
-            </tr>
-            <!--Text Area-->
-            <tr>
-                <td width="100">Place your enquiry here:</td>
-                <td>
-                    <textarea rows="5" cols="25"></textarea>
+                    <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    <span id="phone-feedback" class="feedback"></span>
                 </td>
             </tr>
+
+            <!-- Enquiry Type -->
+            <tr>
+                <td width="100px">Enquiry:</td>
+                <td>
+                    <select id="enquiryType" name="enquiryType" required>
+                        <option value="">--Select--</option>
+                        <option value="order">Place an order</option>
+                        <option value="question">General question</option>
+                        <option value="Custom">Customize your order</option>
+                    </select>
+                    <span id="enquiry-feedback" class="feedback"></span>
+                </td>
+            </tr>
+
+            <!-- Gender -->
+            <tr>
+                <td width="100px">Gender:</td>
+                <td>
+                    <input type="radio" name="gender" id="male" value="male"> Male
+                    <input type="radio" name="gender" id="female" value="female"> Female
+                    <span id="gender-feedback" class="feedback"></span>
+                </td>
+            </tr>
+
+            <!-- Enquiry Text -->
+            <tr>
+                <td width="100px">Place your enquiry here:</td>
+                <td><textarea id="enquiryText" rows="5" cols="25"></textarea></td>
+            </tr>
+
+            <!-- Submit Button -->
             <tr>
                 <td width="100px"></td>
-                <td><input type="submit" name="submit" value="submit"></td>
+                <td><input type="submit" value="Submit" id="submit-button" disabled></td>
             </tr>
         </table>
-    </form> 
+</form>
+
     <footer>
         <div class="socials">
             <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>

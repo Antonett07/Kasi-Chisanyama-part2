@@ -33,6 +33,12 @@
         <p>In our menu we offer delicious and traditional food with various prices</p>
         <h2><li>Full plate = R150</li></h2>
         <h2><li>Half plate = R80</li></h2><br>
+        <div class="image-dropdown">
+            <button class="dropbtn">Select Food Category</button>
+            <div class="dropdown-content">
+              <a href="#braai-meats">Braai Meats</a>
+              <a href="#traditional-dishes">Traditional Dishes</a>
+              <a href="#cold-beverages">Cold Beverages</a>
         <img src="../assets/Braaied meat.webp" width="400" height="300">
         <img src="../assets/Braaied meat.jpg" width="400" height="300">
         <img src="../assets/Braaied meat with sides.jpg" width="400" height="300"><br/>
@@ -67,6 +73,8 @@
             <li>Water (750 ml) = R7</li>
             <li>Cocktails = R45</li><br>
         </ul>
+         </div>
+          </div><br/><br/>
     </main>
     <footer>
         <div class="socials">
@@ -85,6 +93,9 @@
         navLinks.classList.toggle('active');
         hamburger.classList.toggle('active');
         });
+        document.querySelector(".dropbtn").onclick = function () {
+    document.querySelector(".dropdown-content").classList.toggle("show");
+  };
     </script>
 </body>
 </html>

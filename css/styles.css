@@ -220,6 +220,43 @@ form input[type="submit"]:hover {
 }
 
 a:hover, .hamburger:hover, footer .socials a:hover {
-    text-shadow: 0 0 10px rgba(255, 99, 71, 1);
+    text-shadow: 0 0 10px rgb(0, 179, 255);
     transform: scale(1.1);
 }
+
+.image-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 8px;
+  width: 200px;
+}
+
+.dropdown-content img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+

@@ -209,3 +209,5 @@ document.addEventListener('DOMContentLoaded', function () {
     genderInputs.forEach(gender => gender.addEventListener('change', validateGender));
 
 });
+
+

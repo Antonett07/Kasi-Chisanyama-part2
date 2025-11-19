@@ -211,7 +211,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #ff6347;
+    background-color: #0217ff;
 }
 
 /* Glowing Hover Effect */
@@ -368,7 +368,7 @@ a:hover, .hamburger:hover, footer .socials a:hover {
 .feedback {
     display: none;
     font-size: 12px;
-    color: red;
+    color: rgb(255, 0, 0);
 }
 
 input.invalid, select.invalid, textarea.invalid {
@@ -377,4 +377,41 @@ input.invalid, select.invalid, textarea.invalid {
 
 input.valid, select.valid, textarea.valid {
     border: 2px solid green;
+}
+/* Default submit button style */
+input[type="submit"] {
+    background-color: #4CAF50; /* Green by default */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+input[type="submit"]:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* When submit button is enabled (valid form) */
+input[type="submit"]:enabled {
+    background-color: #007BFF; /* Blue */
+    cursor: pointer;
+}
+
+/* When submit button is disabled (invalid form) */
+input[type="submit"]:disabled {
+    background-color: #929191; /* Light grey */
+    cursor: not-allowed;
+}
+
+/* Optional: Add focus style for accessibility */
+input[type="submit"]:focus {
+    outline: 2px solid #0056b3; /* Darker blue for focus */
 }

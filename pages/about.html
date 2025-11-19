@@ -4,128 +4,285 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
+
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f7f7f7;
+        }
+
+        header {
+            text-align: center;
+            padding: 15px 0;
+            background: #111;
+            color: white;
+        }
+
+        header img {
+            max-width: 280px;
+            height: auto;
+        }
+
+       
+        #nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            list-style: none;
+            padding: 0;
+        }
+
+        #nav-links a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        #nav-links a:hover {
+            color: white;
+        }
+
+      
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+        }
+        .hamburger span {
+            width: 30px;
+            height: 4px;
+            background: white;
+            margin: 4px 0;
+        }
+
+        @media (max-width: 800px) {
+            .hamburger {
+                display: flex;
+                margin: auto;
+            }
+            #nav-links {
+                display: none;
+                flex-direction: column;
+                background: #222;
+                padding: 20px;
+            }
+            #nav-links.show {
+                display: flex;
+            }
+        }
+
+       
+        .image-dropdown {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .dropbtn {
+            padding: 12px 22px;
+            background: #ffcc00;
+            border: none;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        .dropdown-content {
+            display: none;
+            background: white;
+            margin: 20px auto;
+            width: 90%;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            text-align: left;
+        }
+
+        .dropdown-content.show {
+            display: block;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        
+        .staff-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .staff-member {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px #ccc;
+            text-align: center;
+        }
+
+        .staff-member img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .socials a {
+            margin: 0 10px;
+            color: white;
+            font-size: 22px;
+        }
+
+        .socials a:hover {
+            color: #ffcc00;
+        }
+    </style>
 </head>
-    <body>
-        <header>
-            <!--Logo-->
-            <img src="../assets/Kasi Chiasanyama LOGO.png" alt="Kasi chisanyama logo" width="400" height="300"><br/>
-             <!--Navigation-->
-             <nav id="nav">
-                <button class="hamburger" id="hamburger">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </button>
-                <ul id="nav-links">
-                    <a href="/index.html">Home</a>
-                    <a href="/pages/about.html">About us</a>
-                    <a href="/pages/contact.html">Contact us</a>
-                    <a href="/pages/enquiry.html">Enquiry</a>
-                    <a href="/pages/services.html">Our services</a>
-                    <a href="/pages/menu.html">Our menu</a>
-                </ul>
-              </nav>
-       </header>
-       <main>
-        <div class="image-dropdown">
-  <button class="dropbtn">Show content ▼</button>
 
-  <div class="dropdown-content">
+<body>
 
-    <div class="card">
-        <!--information based on our chisanyama-->
-            <h1>ABOUT US:</h1>
-            
+<header>
+    <img src="../assets/Kasi Chiasanyama LOGO.png" alt="Kasi chisanyama logo">
+
+    <nav id="nav">
+        <button class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul id="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/pages/about.html">About us</a>
+            <a href="/pages/contact.html">Contact us</a>
+            <a href="/pages/enquiry.html">Enquiry</a>
+            <a href="/pages/service.html">Our services</a>
+            <a href="/pages/menu.html">Our menu</a>
+        </ul>
+    </nav>
+</header>
+
+
+<main>
+
+    <div class="image-dropdown">
+        <button class="dropbtn">Show content ▼</button>
+
+        <div class="dropdown-content">
+
+            <h1>ABOUT US</h1>
+
             <h2>Our History</h2>
-            <p>A kasi (township) chisanyama is a popular social venue in South Africa where people buy and grill meat, often on a "buy-and-braai" basis,
-            creating a vibrant community atmosphere. The term itself is a Zulu word meaning "burn meat". The history is rooted in the township culture, 
-            where these informal braai (barbecue) spots developed as a way for communities to gather, socialize, and enjoy grilled food in an accessible, 
-            communal setting. 
+            <p>
+                A kasi (township) chisanyama is a popular social venue in South Africa where people
+                gather to grill meat, enjoy music, and socialize. The word "chisanyama" comes from
+                Zulu meaning "burn meat". These venues grew from township culture and became vibrant
+                community hubs.
             </p>
-            
+
             <h2>Our Mission</h2>
-            <p>Is to provide our customers with an authentic South African dining experience, celebrating the vibrant flavors 
-                and rich cultural heritage of traditional braai (barbecue) cuisine. We aim to create a warm and welcoming atmosphere where friends and families 
-                can gather, indulge in delicious food, and create lasting memories. We are committed to sourcing the highest quality meats, spices, and ingredients, 
-                ensuring that each dish we serve is flavorful, satisfying, and prepared with passion. Through exceptional service and attention to detail, we strive 
-                to exceed our customers' expectations and become a destination of choice for those seeking a taste of South Africa.
+            <p>
+                We provide authentic South African braai cuisine, a warm atmosphere, and the highest
+                quality meals. We aim to be a place where families and friends create memories while
+                enjoying the true taste of Mzansi.
             </p>
-            
-            <h2>Our vision:</h2>
-            <p>To be the leading fast-food restaurant providing quality and authentic African cuisine to people around the world, To become the premier destination for
-            authentic South African barbecue, renowned for its delectable dishes, vibrant atmosphere, and unparalleled customer satisfaction.</p>
-            
-            <h2>Meet our team:</h2>
-            <!--images of out team-->
-                <div class="staff-container">
-                    <div class="stuff-member">
-                        <p>These are our worker</p>
-                        <img src="../assets/Our Team Workers.jpg" width="400" height="300">
-                        <img src="../assets/Our team workers (2).jpg" width="400" height="300">
-                        <img src="../assets/Our team Workers (3).jpg" width="400" height="300"><br>
-                    </div>
-                    
-                    <div class="stuff-member">
-                        <h3>Braai master: Thabo Baloi</h3>
-                        <p>Responsible for preparing and cooking traditional Siuth African dishes</p>
-                        <img src="../assets/Braai master Thabo Baloi.png" width="400" height="300"><br>
-                    </div>
 
-                    <div class="stuff-member"></div>
-                        <h3>Pap cook/Prep: Monica Moloto</h3>
-                        <p>Responsible for cooking pap and preparing the side dishes</p>
-                        <img src="../assets/Pap Cook Monica Moloto.jpg" width="400" height="300"><br>
-                    </div>
-                    
-                    <div class="stuff-member">
-                        <h3>Side dish chef: Lerato Shai</h3>
-                        <p>Helps with cooking the pap, side diehes and other traditional dishes</p>
-                        <img src="../assets/Side Dish chef Lerato Shai.webp" width="400" height="300"><br>
-                    </div>
+            <h2>Our Vision</h2>
+            <p>
+                To become the leading destination for authentic South African barbecue, offering an
+                unforgettable food experience and exceptional customer service.
+            </p>
 
-                    <div class="stuff-member">
-                        <h3>Cashiers: Katlego Mohlala and Phomolo Komane</h3>
-                        <p>They take orders from customers and notify our chefs about the orders</p>
-                        <img src="../assets/Cashier Katlego Mohlala.jpg" width="400" height="300">
-                        <img src="../assets/Cashier Phomolo Komane.jpg" width="400" height="300"><br>
-                    </div>
+            <h2>Meet Our Team</h2>
 
-                    <div class="stuff-member">
-                        <h3>Event managers: Mpho Lesufi and Kagiso Moraba</h3>
-                        <p>Responsible for hosting events, sound systems and big screening</p>
-                        <img src="../assets/Event manager Mpho Lesufi.jpg" width="400" height="300">
-                        <img src="../assets/Event manager Kagiso Moraba.png" width="400" height="300"><br>
-                    </div>
-                </div>
+            <div class="staff-container">
+
+                <div class="staff-member">
+                    <p><strong>Our hardworking staff team</strong></p>
+                    <img src="../assets/Our Team Workers.jpg">
                 </div>
 
-  </div>
-</div>
+                <div class="staff-member">
+                    <h3>Braai Master: Thabo Baloi</h3>
+                    <p>Prepares and grills our signature braai dishes.</p>
+                    <img src="../assets/Braai master Thabo Baloi.png">
+                </div>
 
-     </main>
-        <footer>
-            <div class="socials">
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <div class="staff-member">
+                    <h3>Pap Cook / Prep: Monica Moloto</h3>
+                    <p>Responsible for cooking pap and preparing traditional sides.</p>
+                    <img src="../assets/Pap Cook Monica Moloto.jpg">
+                </div>
+
+                <div class="staff-member">
+                    <h3>Side Dish Chef: Lerato Shai</h3>
+                    <p>Helps prepare pap, side dishes and specialty meals.</p>
+                    <img src="../assets/Side Dish chef Lerato Shai.webp">
+                </div>
+
+                <div class="staff-member">
+                    <h3>Cashiers: Katlego & Phomolo</h3>
+                    <p>They take customer orders and coordinate with the kitchen.</p>
+                    <img src="../assets/Cashier Katlego Mohlala.jpg">
+                </div>
+
+                <div class="staff-member">
+                    <h3>Event Managers: Mpho & Kagiso</h3>
+                    <p>Handle events, sound systems, and customer experience.</p>
+                    <img src="../assets/Event manager Mpho Lesufi.jpg">
+                </div>
+
             </div>
-            <div id="date-time" class="date-time-box"></div>
-            <p id="my paragraph">&copy;2025 Kasi Chisanyama meat & grill</p>
-        </footer>
-        <script src="../javascript.js">
-            const hamburger = document.querySelector('.hamburger');
-            const navLinks = document.querySelector('.nav-links');
+        </div>
+    </div>
 
-            hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-            });
-            document.querySelector(".dropbtn").onclick = function () {
-            document.querySelector(".dropdown-content").classList.toggle("show");
-            };
-        </script>
-    </body>
+</main>
+
+
+<footer>
+    <div class="socials">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <p>&copy; 2025 Kasi Chisanyama Meat & Grill</p>
+</footer>
+
+
+<script>
+   
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.onclick = () => {
+        navLinks.classList.toggle("show");
+    };
+
+    document.querySelector(".dropbtn").onclick = () => {
+        document.querySelector(".dropdown-content").classList.toggle("show");
+    };
+</script>
+
+</body>
 </html>

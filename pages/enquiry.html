@@ -3,107 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What is your enquiry</title>
+    <title>Kasi Chisanyama | Enquiry</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px 0;
+            background: #111;
+            color: white;
+        }
+
+        header img {
+            max-width: 280px;
+            height: auto;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        #nav-links {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        #nav-links a {
+            text-decoration: none;
+            color: #ffcc00;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        #nav-links a:hover,
+        #nav-links a.active {
+            color: white;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            background: white;
+            height: 3px;
+            width: 30px;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 800px) {
+            .hamburger {
+                display: flex;
+                margin: auto;
+            }
+
+            #nav-links {
+                display: none;
+                flex-direction: column;
+                background: #222;
+                padding: 20px;
+            }
+
+            #nav-links.show {
+                display: flex;
+            }
+
+            #nav-links a {
+                color: #ffcc00;
+            }
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 95%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 25px;
+            background: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background: #e6b800;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            background: #111;
+            color: white;
+        }
+
+        .socials a {
+            margin: 0 10px;
+            color: white;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .socials a:hover {
+            color: #ffcc00;
+        }
+    </style>
 </head>
 <body>
     <header>
-         <!--Logo-->
-         <img src="../assets/Kasi Chiasanyama LOGO.png" alt="Kasi chisanyama logo" width="400" height="300"><br/>
-         <!--Navigation-->
-         <nav id="nav">
+        <img src="../assets/Kasi Chiasanyama LOGO.png" alt="Kasi Chisanyama logo">
+
+        <nav>
             <button class="hamburger" id="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
+
             <ul id="nav-links">
                 <a href="/index.html">Home</a>
                 <a href="/pages/about.html">About us</a>
                 <a href="/pages/contact.html">Contact us</a>
-                <a href="/pages/enquiry.html">Enquiry</a>
-                <a href="/pages/services.html">Our services</a>
+                <a href="/pages/enquiry.html" class="active">Enquiry</a>
+                <a href="/pages/service.html">Our services</a>
                 <a href="/pages/menu.html">Our menu</a>
             </ul>
-          </nav>
+        </nav>
     </header>
-    <h2>Enquiry:</h2>
-     <form id="enquiry-form" action="" method="post">
-        <table>
-            <!-- Name -->
-            <tr>
-                <td width="100px">Name:</td>
-                <td>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                    <span id="name-feedback" class="feedback"></span>
-                </td>
-            </tr>
 
-            <!-- Surname -->
-            <tr>
-                <td width="100px">Surname:</td>
-                <td>
-                    <input type="text" id="surname" name="surname" placeholder="Enter your surname" required>
-                    <span id="surname-feedback" class="feedback"></span>
-                </td>
-            </tr>
+    <main>
+        <h1>Submit Your Enquiry</h1>
 
-            <!-- Email -->
-            <tr>
-                <td width="100px">Email:</td>
-                <td>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    <span id="email-feedback" class="feedback"></span>
-                </td>
-            </tr>
+        <form id="enquiry-form" action="" method="post">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" id="name" name="name" placeholder="Enter your name" required></td>
+                </tr>
 
-            <!-- Phone Number -->
-            <tr>
-                <td width="100px">Phone Number:</td>
-                <td>
-                    <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
-                    <span id="phone-feedback" class="feedback"></span>
-                </td>
-            </tr>
+                <tr>
+                    <td>Surname:</td>
+                    <td><input type="text" id="surname" name="surname" placeholder="Enter your surname" required></td>
+                </tr>
 
-            <!-- Enquiry Type -->
-            <tr>
-                <td width="100px">Enquiry:</td>
-                <td>
-                    <select id="enquiryType" name="enquiryType" required>
-                        <option value="">--Select--</option>
-                        <option value="order">Place an order</option>
-                        <option value="question">General question</option>
-                        <option value="Custom">Customize your order</option>
-                    </select>
-                    <span id="enquiry-feedback" class="feedback"></span>
-                </td>
-            </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" id="email" name="email" placeholder="Enter your email" required></td>
+                </tr>
 
-            <!-- Gender -->
-            <tr>
-                <td width="100px">Gender:</td>
-                <td>
-                    <input type="radio" name="gender" id="male" value="male"> Male
-                    <input type="radio" name="gender" id="female" value="female"> Female
-                    <span id="gender-feedback" class="feedback"></span>
-                </td>
-            </tr>
+                <tr>
+                    <td>Phone Number:</td>
+                    <td><input type="text" id="phone" name="phone" placeholder="Enter your phone number" required></td>
+                </tr>
 
-            <!-- Enquiry Text -->
-            <tr>
-                <td width="100px">Place your enquiry here:</td>
-                <td><textarea id="enquiryText" rows="5" cols="25"></textarea></td>
-            </tr>
+                <tr>
+                    <td>Enquiry Type:</td>
+                    <td>
+                        <select id="enquiryType" name="enquiryType" required>
+                            <option value="">--Select--</option>
+                            <option value="order">Place an order</option>
+                            <option value="question">General question</option>
+                            <option value="custom">Customize your order</option>
+                        </select>
+                    </td>
+                </tr>
 
-            <!-- Submit Button -->
-            <tr>
-                <td width="100px"></td>
-                <td><input type="submit" value="Submit" id="submit-button" disabled></td>
-            </tr>
-        </table>
-</form>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="gender" id="male" value="male"> Male
+                        <input type="radio" name="gender" id="female" value="female"> Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Message:</td>
+                    <td><textarea id="enquiryText" rows="5" placeholder="Place your enquiry here"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Submit"></td>
+                </tr>
+            </table>
+        </form>
+    </main>
 
     <footer>
         <div class="socials">
@@ -112,18 +247,17 @@
             <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
             <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
-        <div id="date-time" class="date-time-box"></div>
-        <p id="my paragraph">&copy;2025 Kasi Chisanyama meat & grill</p>
-    </footer>
-    <script src="../javascript.js">
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
 
-        hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-        });
-        
+        <p>&copy; 2025 Kasi Chisanyama Meat & Grill</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+
+        hamburger.onclick = () => {
+            navLinks.classList.toggle("show");
+        };
     </script>
 </body>
 </html>

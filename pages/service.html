@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kasi Chisanyama | Menu</title>
+    <title>Kasi Chisanyama | Services</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
@@ -99,62 +99,23 @@
             margin-bottom: 15px;
         }
 
+        h2, h3 {
+            color: #222;
+            margin-top: 20px;
+            text-align: center;
+        }
+
         p {
             text-align: center;
             font-size: 18px;
             margin-bottom: 20px;
         }
 
-        .image-dropdown {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .dropbtn {
-            padding: 12px 25px;
-            background: #ffcc00;
-            border: none;
+        ul {
+            max-width: 600px;
+            margin: 10px auto 20px auto;
+            padding-left: 20px;
             font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        .dropbtn:hover {
-            background: #e6b800;
-        }
-
-        .dropdown-content {
-            display: none;
-            background: white;
-            margin: 20px auto;
-            width: 95%;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .dropdown-content.show {
-            display: block;
-        }
-
-        .dropdown-content h3 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .dropdown-content img {
-            width: 100%;
-            max-width: 400px;
-            margin: 10px;
-            border-radius: 8px;
-        }
-
-        .dropdown-content ul {
-            list-style-type: disc;
-            margin: 10px 0 20px 20px;
-            padding: 0;
         }
 
         footer {
@@ -194,70 +155,61 @@
             <a href="/pages/about.html">About us</a>
             <a href="/pages/contact.html">Contact us</a>
             <a href="/pages/enquiry.html">Enquiry</a>
-            <a href="/pages/service.html">Our services</a>
-            <a href="/pages/menu.html" class="active">Our menu</a>
+            <a href="/pages/service.html" class="active">Our services</a>
+            <a href="/pages/menu.html">Our menu</a>
         </ul>
     </nav>
 </header>
 
 <main>
-    <h1>Our Menu</h1>
-    <p>In our menu, we offer delicious and traditional food at affordable prices.</p>
+    <h1>Our Services</h1>
+    <p>
+        At Kasi Chisanyama, we specialize in authentic South African cuisine with a relaxed and fun dining experience.
+    </p>
 
-    <ul style="text-align:center; font-size:18px; margin-bottom: 20px;">
-        <li>Full plate = R150</li>
-        <li>Half plate = R80</li>
+    <h2>What We Offer</h2>
+
+    <h3>Braai Meats</h3>
+    <ul>
+        <li>Boerewors</li>
+        <li>Steak</li>
+        <li>Chicken</li>
+        <li>Pork</li>
     </ul>
 
-    <div class="image-dropdown">
-        <button class="dropbtn">Show the menu ▼</button>
-        <div class="dropdown-content">
+    <h3>Traditional Dishes</h3>
+    <ul>
+        <li>Pap</li>
+        <li>Mogodu</li>
+        <li>Chops</li>
+        <li>Morogo</li>
+        <li>Chakalaka</li>
+        <li>Side dishes</li>
+    </ul>
 
-            <h3>Images of our food</h3>
+    <h3>Cold Beverages</h3>
+    <ul>
+        <li>Soft drinks</li>
+        <li>Water</li>
+    </ul>
 
-            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:15px;">
-                <img src="../assets/Braaied meat.webp" alt="Braai Meat">
-                <img src="../assets/Braaied meat.jpg" alt="Braai Meat">
-                <img src="../assets/Braaied meat with sides.jpg" alt="Braai Meat with sides">
-                <img src="../assets/Braaied meat with sides (2).jpg" alt="Braai Meat">
-                <img src="../assets/Braaied meat (2).jpg" alt="Braai Meat">
-                <img src="../assets/pap-beef.png" alt="Traditional Dish">
-                <img src="../assets/pap with traditional dish.jpeg" alt="Traditional Dish">
-                <img src="../assets/Cocktails.webp" alt="Drinks">
-                <img src="../assets/Soft drinks.jpg" alt="Soft Drinks">
-                <img src="../assets/750ml Water.webp" alt="Water">
-            </div>
+    <h3>Dining Experience</h3>
+    <ul>
+        <li>Casual atmosphere: relaxed and informal setting</li>
+        <li>Outdoor seating areas available</li>
+    </ul>
 
-            <h3>Braai Meats</h3>
-            <ul>
-                <li>Boerewors = R50</li>
-                <li>Steak = R70</li>
-                <li>Full Chicken = R90</li>
-                <li>Half Chicken = R60</li>
-                <li>Quarter Chicken = R25</li>
-                <li>Pork = R60</li>
-            </ul>
+    <h3>Takeaway and Delivery</h3>
+    <ul>
+        <li>Takeaway orders to enjoy elsewhere</li>
+        <li>Delivery services to nearby locations</li>
+    </ul>
 
-            <h3>Traditional Dishes</h3>
-            <ul>
-                <li>Pap = R10</li>
-                <li>Mogodu = R50</li>
-                <li>Chops = R60</li>
-                <li>Morogo = R12</li>
-                <li>Chakalaka = R12</li>
-                <li>Side dishes = Free (Refill = R5)</li>
-            </ul>
-
-            <h3>Cold Beverages</h3>
-            <ul>
-                <li>Soft drinks (All flavours, 2 liters) = R30</li>
-                <li>Water (750 ml) = R7</li>
-                <li>Cocktails = R45</li>
-            </ul>
-
-        </div>
-    </div>
-
+    <h3>Catering Services</h3>
+    <ul>
+        <li>Events: live music and sports broadcasts</li>
+        <li>Braai packages: customizable for events and gatherings</li>
+    </ul>
 </main>
 
 <footer>
@@ -276,10 +228,6 @@
 
     hamburger.onclick = () => {
         navLinks.classList.toggle("show");
-    };
-
-    document.querySelector(".dropbtn").onclick = () => {
-        document.querySelector(".dropdown-content").classList.toggle("show");
     };
 </script>
 

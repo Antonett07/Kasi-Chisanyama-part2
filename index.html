@@ -1,74 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome to our homepage</title>
-        <link rel="stylesheet" href="./css/styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    </head>
-        <body>
-            <header>
-                <!--Logo-->
-            <img src="assets/Kasi Chiasanyama LOGO.png" alt="Kasi chisanyama logo" width="400" height="300"><br/>
-            <!--Navigation-->
-            <nav id="nav">
-                <button class="hamburger" id="hamburger">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </button>
-                
-                <ul id="nav-links">
-                    <a href="/index.html">Home</a>
-                    <a href="/pages/about.html">About us</a>
-                    <a href="/pages/contact.html">Contact us</a>
-                    <a href="/pages/enquiry.html">Enquiry</a>
-                    <a href="/pages/services.html">Our services</a>
-                    <a href="/pages/menu.html">Our menu</a>
-                </ul>
-              </nav>
-            </header>
-            <main>
-                <h1>Welcome to Kasi Chisanyama </h1>
-                <section>
-                    <div class="responsive-text">
-                    <p>
-                        "Kasi chisanyama" refers to a type of informal, township-based eatery in South Africa, often featuring grilled meat (shisa nyama)
-                         and a vibrant social atmosphere. The term "kasi" is derived from "lokasi," meaning township, and "chisanyama" is a combination of "chisa" 
-                         (to burn) and "nyama" (meat), indicating the grilled meat aspect. These establishments are known for their lively environment, often with music,
-                         and are a popular gathering spot for locals. 
-                    </p>
-                    </div>
-                </section>
-                <!--Image-->
-                <section>
-                    <img src="assets/Kasi Chisanyama Image.png" alt="My image" width="100%" height="100%">
-                </section>
-            </main>
-            <footer>
-                <div class="socials">
-                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                </div>
-                <div id="date-time" class="date-time-box"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasi Chisanyama | Home</title>
 
-                <p id="my paragraph">&copy;2025 Kasi Chisanyama meat & grill</p>
-            </footer>
-            <script src="./javascript.js">
-                const hamburger = document.querySelector('.hamburger');
-                const navLinks = document.querySelector('.nav-links');
-    
-                hamburger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                hamburger.classList.toggle('active');
-                });
-                 document.getElementById("hamburger").onclick = function () {
-    document.getElementById("navLinks").classList.toggle("show");
-  };
   
-            </script>
-        </body>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <style>
+     
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px 0;
+            background: #111;
+            color: white;
+        }
+
+        header img {
+            max-width: 280px;
+            height: auto;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        #nav-links {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        #nav-links a {
+            text-decoration: none;
+            color: #ffcc00;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        #nav-links a:hover {
+            color: white;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            background: white;
+            height: 3px;
+            width: 30px;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 800px) {
+            .hamburger {
+                display: flex;
+                margin: auto;
+            }
+
+            #nav-links {
+                display: none;
+                flex-direction: column;
+                background: #222;
+                padding: 20px;
+            }
+
+            #nav-links.show {
+                display: flex;
+            }
+
+            #nav-links a {
+                color: #ffcc00;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            color: #222;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        img.full-banner {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            background: #111;
+            color: white;
+        }
+
+        .socials a {
+            margin: 0 10px;
+            color: white;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .socials a:hover {
+            color: #ffcc00;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="assets/Kasi Chiasanyama LOGO.png" alt="Kasi chisanyama logo">
+
+        <nav>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/pages/about.html">About us</a>
+                <a href="/pages/contact.html">Contact us</a>
+                <a href="/pages/enquiry.html">Enquiry</a>
+                <a href="/pages/service.html">Our services</a>
+                <a href="/pages/menu.html">Our menu</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to Kasi Chisanyama</h1>
+
+        <p>
+            Kasi Chisanyama brings you the authentic township flavour — grilled meat (shisa nyama), 
+            great vibes, music, and a true South African experience. Whether you're here to chill, 
+            eat, or celebrate, we bring people together the kasi way!
+        </p>
+
+        <section>
+            <img class="full-banner" src="assets/Kasi Chisanyama Image.png" alt="Chisanyama atmosphere">
+        </section>
+    </main>
+
+    <footer>
+        <div class="socials">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <p>&copy; 2025 Kasi Chisanyama Meat & Grill</p>
+    </footer>
+
+    <script>
+        
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+
+        hamburger.onclick = () => {
+            navLinks.classList.toggle("show");
+        };
+    </script>
+</body>
 </html>

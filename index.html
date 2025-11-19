@@ -18,6 +18,7 @@
                   <span></span>
                   <span></span>
                 </button>
+                
                 <ul id="nav-links">
                     <a href="/index.html">Home</a>
                     <a href="/pages/about.html">About us</a>
@@ -62,7 +63,10 @@
                 navLinks.classList.toggle('active');
                 hamburger.classList.toggle('active');
                 });
-                
+                 document.getElementById("hamburger").onclick = function () {
+    document.getElementById("navLinks").classList.toggle("show");
+  };
+
             </script>
         </body>
 </html>

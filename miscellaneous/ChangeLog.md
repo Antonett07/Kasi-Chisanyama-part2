@@ -24,4 +24,7 @@ added automated date and time
 images can fit in all devices
 live feedback is active
 added drop down images/ content
+respnsive hamburger
+changed the names of images in assets
+changed the images of employees
 

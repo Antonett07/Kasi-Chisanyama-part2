@@ -220,7 +220,7 @@ form input[type="submit"]:hover {
 }
 
 a:hover, .hamburger:hover, footer .socials a:hover {
-    text-shadow: 0 0 10px rgb(0, 179, 255);
+    text-shadow: 0 0 10px rgb(0, 158, 249);
     transform: scale(1.1);
 }
 
@@ -239,21 +239,40 @@ a:hover, .hamburger:hover, footer .socials a:hover {
   border-radius: 5px;
 }
 
+/* Dropdown box */
 .dropdown-content {
   display: none;
-  position: absolute;
-  background: #fff;
-  padding: 10px;
+  position: static;
+  background: #f8f8f8;
+  padding: 15px;
   border: 1px solid #ddd;
-  border-radius: 6px;
+  border-radius: 10px;
   margin-top: 8px;
-  width: 200px;
+  width: 320px; /* bigger box to fit medium cards */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.dropdown-content img {
-  width: 100%;
-  margin-bottom: 10px;
-  border-radius: 6px;
+/* --- MEDIUM CARD STYLE --- */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  width: 280px;     /* <<< MEDIUM WIDTH */
+}
+
+/* Medium image size */
+.card img {
+  width: 100%;      /* Image will fill card width */
+  height: 180px;    /* <<< MEDIUM HEIGHT */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
 }
 
 .dropdown-content.show {
